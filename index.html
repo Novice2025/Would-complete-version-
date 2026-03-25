@@ -426,6 +426,94 @@ header p{
   left:0;
 }
 
+/* ---------- DIAGRAM TAB ---------- */
+
+.diagram-intro{
+  margin-bottom:18px;
+  font-size:.95rem;
+  color:#d9ddff;
+}
+
+.diagram-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
+}
+
+.diagram-card{
+  background:var(--bg-elevated);
+  border-radius:var(--radius-md);
+  border:1px solid var(--border-subtle);
+  padding:12px 14px;
+  box-shadow:0 10px 22px rgba(0,0,0,.55);
+}
+
+.diagram-card h3{
+  font-size:.9rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:6px;
+  color:var(--accent-soft);
+}
+
+.diagram-row{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:4px;
+  font-size:.85rem;
+  color:#dde1ff;
+}
+
+.diagram-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:28px;
+  padding:2px 6px;
+  border-radius:999px;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.badge-pt{
+  background:rgba(80,200,120,.18);
+  border:1px solid rgba(80,200,120,.6);
+  color:#9ae8b3;
+}
+
+.badge-en{
+  background:rgba(74,144,226,.18);
+  border:1px solid rgba(74,144,226,.6);
+  color:#9ac5ff;
+}
+
+.diagram-arrow{
+  font-size:1.1rem;
+  color:#ffb2d3;
+  margin:0 2px;
+}
+
+.diagram-text{
+  flex:1;
+}
+
+.diagram-example{
+  margin-top:4px;
+  font-size:.82rem;
+  color:#b8bee9;
+}
+
+.diagram-note{
+  margin-top:6px;
+  font-size:.8rem;
+  color:#ffddb0;
+  border-top:1px dashed rgba(240,160,48,.5);
+  padding-top:4px;
+}
+
 /* chips */
 
 .when-grid{
@@ -659,6 +747,9 @@ header p{
   <button class="tab-btn" data-target="pane-data">💻 Hypothetical tech</button>
   <button class="tab-btn" data-target="pane-risk">⚠️ What would happen if...?</button>
   <button class="tab-btn" data-target="pane-meetings">📆 Meetings & agendas</button>
+  <!-- NEW TAB BUTTON -->
+  <button class="tab-btn" data-target="pane-diagram">🧩 Diagram (Map of WOULD)</button>
+  <!-- END NEW TAB BUTTON -->
   <button class="tab-btn" data-target="pane-exercises">✏️ Exercises</button>
 </div>
 
@@ -765,7 +856,10 @@ header p{
       Tudo isso funciona, mas em inglês profissional, <strong>WOULD YOU</strong> é a forma mais suave e educada.
     </p>
     <p>
-      Pense assim:
+      Não pense em “would” como um tempo verbal mágico. Pense como uma
+      <strong>almofada de educação em volta do pedido</strong>:
+      na sua cabeça é “<em>você poderia...?</em>”, e em inglês a forma
+      mais profissional para isso é <strong>WOULD YOU + verbo</strong>.
     </p>
     <div class="pt-vocab">
       <h5>CAN x DO x WOULD em perguntas</h5>
@@ -863,7 +957,7 @@ header p{
     </p>
     <p>
       <span class="rule-chip">
-        <u>REMEMBER:</u> <strong>I WOULD</strong> = “eu ajudaria / eu faria” (em uma certa condição)
+        <u>REMEMBER:</u> <strong>I WOULD</strong> = “eu topo / eu faria isso, <em>se</em> tal coisa acontecer”
       </span>
     </p>
   </div>
@@ -882,7 +976,7 @@ header p{
     </div>
     <p>
       Na sua cabeça em português:
-      <em>"Eu te ajudaria com os gráficos se você achar útil."</em>
+      <em>"Se der, eu te ajudo com os gráficos se você achar útil."</em>
     </p>
 
     <div class="advanced-note">
@@ -924,9 +1018,11 @@ header p{
   <div class="pt-content">
     <h4>Explicação em Português Brasileiro</h4>
     <p>
-      Em português, você pensa assim:
-      <strong>"Eu te ajudaria se..."</strong>, <strong>"Eu faria isso se..."</strong>.  
-      Em inglês, isso vira <strong>I WOULD + verbo + IF...</strong>.
+      Em português, você pensa algo como:
+      <strong>"Se der, eu te ajudo..."</strong>, <strong>"Se eu tivesse tempo, eu te ajudava..."</strong>.  
+      Em inglês, essa mesma ideia de oferta condicionada vira
+      <strong>I WOULD + verbo + IF...</strong> — não é só “ajudaria” como tempo verbal, é
+      <strong>“eu estaria disposto a fazer X, se Y acontecer”</strong>.
     </p>
     <div class="pt-vocab">
       <h5>Construção para lembrar</h5>
@@ -938,7 +1034,7 @@ header p{
     </div>
     <p>
       Importante: <strong>CAN</strong> fala de capacidade (“eu posso”),  
-      <strong>WOULD</strong> fala de vontade sob condição (“eu ajudaria se...”).
+      <strong>WOULD</strong> fala de <strong>disposição sob condição</strong> (“eu ajudaria se...”).
     </p>
 
     <div class="ptbr-box">
@@ -950,8 +1046,8 @@ header p{
     </div>
 
     <p><strong>Resumo simples:</strong><br>
-      Se em português você pensa <em>"eu ajudaria se..."</em>,  
-      experimente usar <strong>I WOULD + verbo + IF</strong> em inglês.
+      Se em português você pensa <em>"eu te ajudo se..."</em> ou <em>"eu faria isso se..."</em>,  
+      experimente usar <strong>I WOULD + verbo + IF...</strong>.
     </p>
   </div>
 
@@ -959,13 +1055,11 @@ header p{
   <div class="exercise-card" data-answer="would">
     <div class="ex-label">EX B (Offers)</div>
     <div class="context">
-      You want to help a colleague, but only if you finish your own work first.
-      In Portuguese you think: “Eu te ajudaria se eu terminasse isso aqui.”
+      You want to say: “Eu te ajudaria com a planilha se eu terminar este relatório.”
     </div>
     <div class="sentence">
-      "I ______ help you if I finished this first."
+      "I ______ help you with the spreadsheet if I finish this report."
     </div>
-    <!-- no input yet – for now student writes in notebook; feedback explains -->
     <button class="check-btn" onclick="checkExercise(this)">Check</button>
     <div class="feedback"></div>
   </div>
@@ -973,8 +1067,7 @@ header p{
   <div class="tips-box">
     <h4>💡 What to write in your notebook</h4>
     <ul>
-      <li>Write the pattern: <strong>I WOULD + verb + IF + condition</strong>.</li>
-      <li>Write 3 sentences starting with “I would…” in English, based on real situations in your job.</li>
+      <li>Write 3 sentences of this type: “I would help / join / support if…”.</li>
     </ul>
   </div>
 
@@ -988,35 +1081,31 @@ header p{
   <div class="imagine-block">
     <h2>Imagine that you are...</h2>
     <p>
-      telling a story about your previous job. You want to talk about things you
-      <strong>used to do regularly</strong> in the past.
+      talking about routines you had in a past job. You want to say what you
+      <strong>would do regularly</strong> in that context.
     </p>
     <div class="quote">
-      "When I worked at the bank, I <strong>would</strong> stay late every Friday to finish the weekly reports."
+      "When I worked at the agency, I <strong>would</strong> always check my inbox before 8 am."
     </div>
   </div>
 
   <div class="section-title">📌 What this “WOULD” means here</div>
   <div class="meaning-box">
     <p>
-      Here, <strong>would</strong> shows a <strong>repeated action in the past</strong> – a habit or routine.
+      Here, <strong>would</strong> describes a <strong>repeated action in the past</strong>,
+      similar to “used to”.
     </p>
     <p>
-      ● “I stayed late.” = one specific moment. <br>
-      ● “I <strong>would</strong> stay late every Friday.” = isso era um hábito no passado.
-    </p>
-    <p>
-      <span class="rule-chip">
-        <u>REMEMBER:</u> "When I was..., I <strong>would</strong> + verb" = "Quando eu era..., eu <strong>costumava</strong>..."
-      </span>
+      ● “I checked my inbox.” = one time / simple past.<br>
+      ● “I <strong>would</strong> check my inbox every morning.” = hábito no passado.
     </p>
   </div>
 
-  <div class="section-title">🎬 Scene 1 — Talking about an old routine</div>
+  <div class="section-title">🎬 Scene 1 — Past workload habit</div>
   <div class="scenario-card">
-    <div class="tag">PAST JOB</div>
-    <h3>Você descrevendo seu antigo emprego em entrevista</h3>
-    <p>O recrutador pergunta como era seu dia a dia.</p>
+    <div class="tag">PAST ROUTINE</div>
+    <h3>Você explicando sua rotina antiga</h3>
+    <p>Você quer mostrar que tinha disciplina em um emprego anterior.</p>
     <div class="dialogue">
       <div class="person">You</div>
       <div class="speech">
@@ -1110,7 +1199,7 @@ header p{
     </p>
     <p>
       <span class="rule-chip">
-        <u>REMEMBER:</u> <strong>WE WOULD NEED</strong> = "nós precisaríamos"
+        <u>REMEMBER:</u> <strong>WE WOULD NEED</strong> = "nós precisaríamos (nessas condições)"
       </span>
     </p>
   </div>
@@ -1258,10 +1347,15 @@ header p{
       Em inglês, isso é:
       <strong>"If I were you, I WOULD + verbo"</strong>.
     </p>
+    <p>
+      Em vez de pensar só em “faria” (tempo verbal), pense em:
+      <strong>"eu, no seu lugar, tomaria esse caminho"</strong>.  
+      <strong>I would...</strong> mostra o que <em>eu escolheria</em>, mas sem mandar em você.
+    </p>
     <div class="pt-vocab">
       <h5>Construção para lembrar</h5>
       <ul>
-        <li><strong>If I were you, I WOULD + verbo</strong></li>
+        <li><strong>IF I WERE YOU, I WOULD + verbo</strong></li>
         <li>"If I were you, I would wait." = Se eu fosse você, eu esperaria.</li>
       </ul>
     </div>
@@ -1350,6 +1444,13 @@ header p{
       Em português você fala:
       <strong>"Eu diria que..."</strong>, <strong>"Eu acho que..."</strong>.  
       Em inglês, <strong>I would say</strong> é uma forma elegante de fazer isso.
+    </p>
+    <p>
+      Não pense só em “diria” como tempo verbal isolado. Pense em:
+      <strong>"olha, na minha leitura..."</strong>,
+      <strong>"eu tenderia a dizer que..."</strong>.  
+      <strong>I would say</strong> mostra que você abre seu ponto de vista,
+      sem bater o martelo como verdade absoluta.
     </p>
     <div class="pt-vocab">
       <h5>Construção para lembrar</h5>
@@ -1442,6 +1543,12 @@ header p{
       Em comunicação formal, o <strong>would</strong> deixa a frase menos absoluta.
       É como dizer "a tendência é que...", "a expectativa seria...".
     </p>
+    <p>
+      Em vez de pensar só em “esperaríamos” como forma verbal,
+      pense que <strong>we would expect</strong> é quase:
+      <strong>"a nossa expectativa natural é..."</strong> — uma projeção baseada em dados,
+      não uma garantia nem uma ameaça.
+    </p>
     <div class="pt-vocab">
       <h5>Construção para lembrar</h5>
       <ul>
@@ -1527,6 +1634,11 @@ header p{
     <p>
       Aqui, <strong>we would expect</strong> é “nós esperaríamos que...”, mas na prática funciona como
       “nós esperamos que, em situações assim, você...”.
+    </p>
+    <p>
+      É uma forma mais educada do que “<em>we expect you to</em>”.
+      O <strong>would</strong> amacia a frase: mostra que essa é a
+      <strong>norma da casa</strong>, não um puxão de orelha imediato.
     </p>
     <div class="pt-vocab">
       <h5>Construção para lembrar</h5>
@@ -1616,6 +1728,10 @@ header p{
     <p>
       Em engenharia, <strong>would</strong> serve para dizer o que aconteceria em determinado cenário:
       “se a gente fizer X, Y aconteceria”.
+    </p>
+    <p>
+      Não é passado (“ficaria” no tempo passado), é <strong>hipótese de comportamento</strong>:
+      quase “vai acontecer isso, <em>mas só se</em> fizermos tal coisa”.
     </p>
     <div class="pt-vocab">
       <h5>Construção para lembrar</h5>
@@ -1788,6 +1904,9 @@ header p{
       Em português: <strong>"Eu começaria..."</strong>, <strong>"Eu faria assim..."</strong>.  
       Em inglês: <strong>"I would start..."</strong>, <strong>"I would do it this way..."</strong>.
     </p>
+    <p>
+      É a sua forma de dizer: <strong>"se dependesse de mim, eu começaria por aqui"</strong>.
+    </p>
     <div class="pt-vocab">
       <h5>Construção para lembrar</h5>
       <ul>
@@ -1822,6 +1941,207 @@ header p{
   <p style="margin-top:8px;color:#a0a8c0;">
     What did you write in your notebook about <strong>I WOULD START...</strong>?
   </p>
+</div>
+
+<!-- ============ DIAGRAM (MAP OF WOULD) ============ -->
+<div id="pane-diagram" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      looking at a situation in Portuguese and thinking:  
+      <em>"Eu pediria assim..." / "Se eu fosse você..." / "O que aconteceria se...?"</em>  
+      This tab is a <strong>map</strong> to choose the right <strong>would</strong> structure in English.
+    </p>
+    <div class="quote">
+      Brain rule: <strong>first think in Portuguese</strong>, then find the block below that matches your idea.
+    </div>
+  </div>
+
+  <div class="section-title">🧩 Map of common “WOULD” patterns</div>
+  <div class="diagram-intro">
+    Each card follows the same logic:
+    <br>
+    <strong>Portuguese thought → English structure with WOULD</strong>.
+  </div>
+
+  <div class="diagram-grid">
+    <!-- 1. Polite request -->
+    <div class="diagram-card">
+      <h3>1. Pedido educado</h3>
+      <div class="diagram-row">
+        <span class="diagram-badge badge-pt">PT</span>
+        <span class="diagram-text"><strong>"Você pode / poderia...?"</strong></span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-arrow">⟶</span>
+        <span class="diagram-badge badge-en">EN</span>
+        <span class="diagram-text"><strong>WOULD YOU + verb...?</strong></span>
+      </div>
+      <div class="diagram-example">
+        PT: "Você poderia me mandar o arquivo?"<br>
+        EN: "<strong>Would you</strong> send me the file?"
+      </div>
+      <div class="diagram-note">
+        Pedido profissional padrão. Pense em: "você poderia...?" com um travesseiro de educação.
+      </div>
+    </div>
+
+    <!-- 2. Conditional offer -->
+    <div class="diagram-card">
+      <h3>2. Oferta de ajuda (condicional)</h3>
+      <div class="diagram-row">
+        <span class="diagram-badge badge-pt">PT</span>
+        <span class="diagram-text"><strong>"Se precisar, eu ajudo." / "Eu até ajudaria se..."</strong></span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-arrow">⟶</span>
+        <span class="diagram-badge badge-en">EN</span>
+        <span class="diagram-text"><strong>I WOULD + help / support / jump in IF...</strong></span>
+      </div>
+      <div class="diagram-example">
+        PT: "Se você travar, eu ajudo na apresentação."<br>
+        EN: "If you get stuck, I <strong>would</strong> be happy to help with the presentation."
+      </div>
+      <div class="diagram-note">
+        Mostra <u>disposição sob condição</u>: eu topo, mas depende de X.
+      </div>
+    </div>
+
+    <!-- 3. Personal advice -->
+    <div class="diagram-card">
+      <h3>3. Conselho pessoal</h3>
+      <div class="diagram-row">
+        <span class="diagram-badge badge-pt">PT</span>
+        <span class="diagram-text"><strong>"Se eu fosse você..." / "No seu lugar, eu..."</strong></span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-arrow">⟶</span>
+        <span class="diagram-badge badge-en">EN</span>
+        <span class="diagram-text"><strong>IF I WERE YOU, I WOULD + verb...</strong></span>
+      </div>
+      <div class="diagram-example">
+        PT: "Se eu fosse você, eu esperaria."<br>
+        EN: "If I were you, I <strong>would</strong> wait."
+      </div>
+      <div class="diagram-note">
+        Jeito clássico de dar conselho sem mandar: “eu, no seu lugar, faria assim”.
+      </div>
+    </div>
+
+    <!-- 4. Soft opinion -->
+    <div class="diagram-card">
+      <h3>4. Opinião suave</h3>
+      <div class="diagram-row">
+        <span class="diagram-badge badge-pt">PT</span>
+        <span class="diagram-text"><strong>"Eu diria que..." / "Eu acho que..."</strong></span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-arrow">⟶</span>
+        <span class="diagram-badge badge-en">EN</span>
+        <span class="diagram-text"><strong>I WOULD SAY + opinion</strong></span>
+      </div>
+      <div class="diagram-example">
+        PT: "Eu diria que o maior risco é prazo."<br>
+        EN: "I <strong>would say</strong> the biggest risk is timing."
+      </div>
+      <div class="diagram-note">
+        Profissional, menos bruto que “I think” o tempo todo, e menos absoluto.
+      </div>
+    </div>
+
+    <!-- 5. Past habits -->
+    <div class="diagram-card">
+      <h3>5. Hábito no passado</h3>
+      <div class="diagram-row">
+        <span class="diagram-badge badge-pt">PT</span>
+        <span class="diagram-text"><strong>"Quando eu era X, eu sempre..."</strong></span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-arrow">⟶</span>
+        <span class="diagram-badge badge-en">EN</span>
+        <span class="diagram-text"><strong>WHEN I WAS..., I WOULD + verb</strong></span>
+      </div>
+      <div class="diagram-example">
+        PT: "Quando eu era estagiário, eu sempre chegava mais cedo."<br>
+        EN: "When I was an intern, I <strong>would</strong> always arrive early."
+      </div>
+      <div class="diagram-note">
+        Muito parecido com "used to", mostrando costume repetido no passado.
+      </div>
+    </div>
+
+    <!-- 6. Hypothetical behaviour -->
+    <div class="diagram-card">
+      <h3>6. Hipótese técnica / processo</h3>
+      <div class="diagram-row">
+        <span class="diagram-badge badge-pt">PT</span>
+        <span class="diagram-text"><strong>"Se a gente fizesse X, Y aconteceria."</strong></span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-arrow">⟶</span>
+        <span class="diagram-badge badge-en">EN</span>
+        <span class="diagram-text"><strong>IF + X, Y WOULD + verb</strong></span>
+      </div>
+      <div class="diagram-example">
+        PT: "Se tirássemos o cache, o sistema ficaria lento."<br>
+        EN: "If we removed the cache, the system <strong>would</strong> slow down."
+      </div>
+      <div class="diagram-note">
+        Explica comportamento de sistema / processo em cenário hipotético.
+      </div>
+    </div>
+
+    <!-- 7. Risk question -->
+    <div class="diagram-card">
+      <h3>7. Pergunta de risco</h3>
+      <div class="diagram-row">
+        <span class="diagram-badge badge-pt">PT</span>
+        <span class="diagram-text"><strong>"O que aconteceria se...?"</strong></span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-arrow">⟶</span>
+        <span class="diagram-badge badge-en">EN</span>
+        <span class="diagram-text"><strong>WHAT WOULD HAPPEN IF...?</strong></span>
+      </div>
+      <div class="diagram-example">
+        PT: "O que aconteceria se o sistema caísse?"<br>
+        EN: "What <strong>would</strong> happen if the system went down?"
+      </div>
+      <div class="diagram-note">
+        Pergunta‑chave em qualquer discussão de risco ou contingência.
+      </div>
+    </div>
+
+    <!-- 8. Expectations -->
+    <div class="diagram-card">
+      <h3>8. Expectativa profissional</h3>
+      <div class="diagram-row">
+        <span class="diagram-badge badge-pt">PT</span>
+        <span class="diagram-text"><strong>"A gente espera que..." / "Nossa expectativa é..."</strong></span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-arrow">⟶</span>
+        <span class="diagram-badge badge-en">EN</span>
+        <span class="diagram-text"><strong>WE WOULD EXPECT + result / you to...</strong></span>
+      </div>
+      <div class="diagram-example">
+        PT: "A gente espera que você avise se for se atrasar."<br>
+        EN: "We <strong>would expect</strong> you to let us know if you’re running late."
+      </div>
+      <div class="diagram-note">
+        Sinaliza a norma da casa sem parecer bronca ou ameaça.
+      </div>
+    </div>
+  </div>
+
+  <div class="tips-box" style="margin-top:18px;">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Escolha 3 blocos (por exemplo: pedidos, conselhos, risco).</li>
+      <li>Para cada bloco, escreva 2 frases em português da sua rotina.</li>
+      <li>Converta cada frase usando a estrutura com <strong>would</strong> indicada no diagrama.</li>
+    </ul>
+  </div>
 </div>
 
 <!-- ============ EXERCISES (GLOBAL) ============ -->
@@ -1870,12 +2190,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function togglePT(button){
   const content = button.nextElementSibling;
   if (!content) return;
-  const isOpen = content.classList.contains('visible');
+  const isOpen = content.style.display === 'block';
   if (isOpen){
-    content.classList.remove('visible');
+    content.style.display = 'none';
     button.classList.remove('open');
   }else{
-    content.classList.add('visible');
+    content.style.display = 'block';
     button.classList.add('open');
   }
 }
