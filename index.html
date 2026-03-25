@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WOULD at Work – Premium Guide for Brazilians</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --bg-main:#050712;
+  --bg-elevated:#101321;
+  --bg-elevated-soft:#151a2a;
+  --accent:#ff4b8a;
+  --accent-soft:#ff8ab5;
+  --accent-alt:#46e6c1;
+  --text-main:#e7ebff;
+  --text-muted:#8f96b8;
+  --border-subtle:#252a40;
+  --shadow-soft:0 18px 45px rgba(0,0,0,.65);
+  --radius-lg:16px;
+  --radius-md:12px;
+  --radius-sm:8px;
+  --transition-fast:.18s ease-out;
+}
+
+html,body{
+  font-family:'Inter','Segoe UI',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  background:radial-gradient(circle at top,#1e2340 0,#050712 42%);
+  color:var(--text-main);
+  min-height:100vh;
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:900;
+  padding:32px 24px 22px;
+  text-align:center;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  background:
+    linear-gradient(135deg,rgba(255,75,138,.13),transparent 50%),
+    radial-gradient(circle at top left,rgba(70,230,193,.12),transparent 55%),
+    rgba(5,7,18,.96);
+  backdrop-filter:blur(22px);
+}
+
+header h1{
+  font-size:2.7rem;
+  letter-spacing:2.2px;
+  font-weight:800;
+  color:#fff;
+}
+header h1 span{
+  background:linear-gradient(120deg,#ff8ab5,#ff4b8a,#ffcf6b);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+header p{
+  margin-top:10px;
+  color:var(--text-muted);
+  font-size:.98rem;
+  max-width:640px;
+  margin-inline:auto;
+}
+
+/* ---------- TABS NAV ---------- */
+
+.tab-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  padding:10px 18px 0;
+  background:linear-gradient(to bottom,rgba(5,7,18,.94),rgba(5,7,18,.97));
+  border-bottom:1px solid rgba(255,255,255,.04);
+  backdrop-filter:blur(18px);
+  position:sticky;
+  top:92px;
+  z-index:850;
+}
+
+.tab-btn{
+  position:relative;
+  border:none;
+  background:rgba(16,19,33,.9);
+  color:var(--text-muted);
+  padding:8px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+  box-shadow:0 0 0 rgba(0,0,0,0);
+}
+.tab-btn::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  border:1px solid rgba(255,255,255,.04);
+  pointer-events:none;
+}
+.tab-btn:hover{
+  background:#20263a;
+  color:#fff;
+  transform:translateY(-1px);
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+.tab-btn.active{
+  background:radial-gradient(circle at top,#ff8ab5,#ff4b8a);
+  color:#fff;
+  box-shadow:0 14px 30px rgba(255,75,138,.45);
+}
+.tab-btn.active::after{
+  border-color:rgba(255,255,255,.22);
+}
+
+/* ---------- TAB PANES ---------- */
+
+.tab-pane{
+  display:none;
+  max-width:980px;
+  margin:0 auto;
+  padding:28px 22px 40px;
+}
+.tab-pane.active{display:block;}
+
+/* ---------- BLOCKS ---------- */
+
+.imagine-block{
+  position:relative;
+  background:
+    radial-gradient(circle at 0 0,rgba(255,75,138,.13),transparent 55%),
+    radial-gradient(circle at 100% 0,rgba(70,230,193,.08),transparent 45%),
+    linear-gradient(135deg,#171b30,#101321);
+  border-radius:var(--radius-lg);
+  padding:26px 22px 20px;
+  margin-bottom:24px;
+  box-shadow:var(--shadow-soft);
+  border:1px solid rgba(255,255,255,.06);
+}
+.imagine-block::before{
+  content:'💭';
+  position:absolute;
+  top:-14px;
+  left:22px;
+  font-size:1.7rem;
+  filter:drop-shadow(0 4px 10px rgba(0,0,0,.6));
+}
+.imagine-block h2{
+  font-size:.82rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:var(--text-muted);
+  margin-bottom:6px;
+}
+.imagine-block p{
+  font-size:1rem;
+  line-height:1.7;
+}
+.imagine-block .quote{
+  display:block;
+  margin-top:12px;
+  padding:10px 14px;
+  border-radius:var(--radius-md);
+  background:linear-gradient(135deg,rgba(255,75,138,.15),rgba(255,75,138,.05));
+  border:1px solid rgba(255,75,138,.45);
+  font-style:italic;
+  color:#ffd4e5;
+}
+
+/* section titles */
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:.95rem;
+  font-weight:700;
+  color:var(--accent-soft);
+  margin:22px 0 10px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+}
+.section-title::before{
+  content:'';
+  width:14px;
+  height:2px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--accent),transparent);
+}
+
+/* meaning box */
+
+.meaning-box{
+  background:var(--bg-elevated-soft);
+  border-radius:var(--radius-md);
+  padding:14px 18px;
+  border:1px solid var(--border-subtle);
+  box-shadow:0 12px 28px rgba(0,0,0,.65);
+}
+.meaning-box p + p{margin-top:8px;}
+.meaning-box strong{color:var(--accent-soft);}
+
+/* scenarios */
+
+.scenario-card{
+  background:var(--bg-elevated);
+  border-radius:var(--radius-md);
+  padding:16px 16px 14px;
+  border:1px solid var(--border-subtle);
+  margin-bottom:14px;
+  transition:border-color var(--transition-fast),
+           transform var(--transition-fast),
+           box-shadow var(--transition-fast);
+}
+.scenario-card:hover{
+  border-color:var(--accent-soft);
+  transform:translateY(-2px);
+  box-shadow:0 12px 26px rgba(0,0,0,.6);
+}
+.tag{
+  display:inline-block;
+  padding:3px 11px;
+  border-radius:999px;
+  background:rgba(255,75,138,.12);
+  border:1px solid rgba(255,75,138,.4);
+  color:var(--accent-soft);
+  font-size:.7rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  margin-bottom:6px;
+}
+.scenario-card h3{
+  font-size:.95rem;
+  margin-bottom:4px;
+  color:#f3f2ff;
+}
+.scenario-card>p{
+  font-size:.9rem;
+  color:var(--text-muted);
+  margin-bottom:4px;
+}
+
+/* dialogues */
+
+.dialogue{
+  margin-top:6px;
+  padding:9px 11px;
+  border-radius:var(--radius-sm);
+  background:linear-gradient(135deg,#101321,#151a2a);
+  border-left:3px solid #4a90e2;
+}
+.dialogue .person{
+  font-size:.72rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:#4a90e2;
+  margin-bottom:2px;
+}
+.dialogue .speech{
+  font-size:.9rem;
+  color:#dfe4ff;
+  line-height:1.6;
+}
+
+/* PT toggles */
+
+.pt-toggle-btn{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:linear-gradient(135deg,#122215,#121a14);
+  border-radius:var(--radius-md);
+  border:1px solid rgba(80,200,120,.45);
+  padding:10px 16px;
+  cursor:pointer;
+  margin:16px 0 0;
+  color:#9ae8b3;
+  font-size:.88rem;
+  font-weight:700;
+  text-align:left;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+.pt-toggle-btn:hover{
+  background:linear-gradient(135deg,#152818,#132017);
+  box-shadow:0 10px 26px rgba(0,0,0,.6);
+}
+.pt-toggle-btn .arrow{
+  margin-left:auto;
+  transition:transform .25s ease;
+}
+.pt-toggle-btn.open .arrow{
+  transform:rotate(180deg);
+}
+
+.pt-content{
+  margin-bottom:16px;
+  border-radius:0 0 var(--radius-md) var(--radius-md);
+  background:radial-gradient(circle at top,rgba(80,200,120,.22),transparent 55%),
+             #071209;
+  border:1px solid rgba(80,200,120,.45);
+  border-top:none;
+  padding:14px 16px 16px;
+}
+.pt-content h4{
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:#9ae8b3;
+  margin-bottom:6px;
+}
+.pt-content>p{
+  font-size:.9rem;
+  color:#b4f4c7;
+}
+
+/* PT vocab & BR boxes */
+
+.pt-vocab{
+  margin-top:10px;
+  border-radius:var(--radius-sm);
+  background:rgba(0,0,0,.2);
+  padding:10px 12px;
+}
+.pt-vocab h5{
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:#9ae8b3;
+  margin-bottom:6px;
+}
+.pt-vocab ul{
+  list-style:none;
+}
+.pt-vocab li{
+  font-size:.86rem;
+  color:#c5f8d3;
+  padding-left:18px;
+  position:relative;
+  margin-bottom:2px;
+}
+.pt-vocab li::before{
+  content:'→';
+  position:absolute;
+  left:0;
+  color:#9ae8b3;
+}
+
+.ptbr-box{
+  margin-top:14px;
+  border-radius:var(--radius-md);
+  background:linear-gradient(135deg,#132416,#182a1b);
+  border:1px solid rgba(80,200,120,.45);
+  padding:12px 14px;
+}
+.ptbr-box h4{
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:#9ae8b3;
+  margin-bottom:4px;
+}
+.ptbr-box ul{
+  list-style:none;
+}
+.ptbr-box li{
+  position:relative;
+  padding-left:23px;
+  font-size:.88rem;
+  color:#d2f7d8;
+  margin-bottom:3px;
+}
+.ptbr-box li::before{
+  content:'🇧🇷';
+  position:absolute;
+  left:0;
+}
+
+/* tips */
+
+.tips-box{
+  border-radius:var(--radius-md);
+  background:linear-gradient(135deg,#2a1b0b,#3a2410);
+  border:1px solid rgba(240,160,48,.5);
+  padding:12px 14px;
+}
+.tips-box h4{
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:#ffc46b;
+  margin-bottom:4px;
+}
+.tips-box ul{list-style:none;}
+.tips-box li{
+  position:relative;
+  padding-left:24px;
+  font-size:.86rem;
+  color:#f3d5a3;
+  margin-bottom:4px;
+}
+.tips-box li::before{
+  content:'💡';
+  position:absolute;
+  left:0;
+}
+
+/* chips */
+
+.when-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:8px;
+  margin-top:8px;
+}
+.when-chip{
+  border-radius:999px;
+  padding:8px 10px;
+  background:#14182a;
+  border:1px solid #2c3350;
+  font-size:.8rem;
+  color:#a3a8d1;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.when-chip .icon{
+  font-size:1.2rem;
+}
+
+/* ---------- Exercises (global tab) ---------- */
+
+.score-box{
+  margin-bottom:22px;
+  border-radius:var(--radius-lg);
+  padding:18px 18px 16px;
+  background:radial-gradient(circle at top,rgba(255,75,138,.25),transparent 55%),
+             #111326;
+  border:1px solid rgba(255,75,138,.5);
+  text-align:center;
+  box-shadow:var(--shadow-soft);
+}
+.score-box h3{
+  font-size:.8rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  color:#ffb2d3;
+}
+.score-number{
+  font-size:2.3rem;
+  font-weight:900;
+  margin-top:4px;
+}
+.score-sub{
+  font-size:.86rem;
+  color:var(--text-muted);
+}
+.reset-btn{
+  margin-top:10px;
+  padding:7px 18px;
+  border-radius:999px;
+  border:1px solid rgba(255,75,138,.7);
+  background:transparent;
+  color:#ffb2d3;
+  font-size:.8rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  cursor:pointer;
+  transition:background var(--transition-fast),color var(--transition-fast);
+}
+.reset-btn:hover{
+  background:rgba(255,75,138,.18);
+  color:#fff;
+}
+
+/* exercise cards */
+
+.exercise-card{
+  background:var(--bg-elevated);
+  border-radius:var(--radius-md);
+  padding:16px 16px 14px;
+  border:1px solid var(--border-subtle);
+  margin-bottom:16px;
+  box-shadow:0 10px 22px rgba(0,0,0,.55);
+}
+.ex-label{
+  display:inline-block;
+  padding:3px 11px;
+  border-radius:999px;
+  background:rgba(74,144,226,.18);
+  border:1px solid rgba(74,144,226,.5);
+  color:#9ac5ff;
+  font-size:.7rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  margin-bottom:6px;
+}
+.context{
+  font-size:.8rem;
+  font-style:italic;
+  color:var(--text-muted);
+  margin-bottom:6px;
+}
+.sentence{
+  font-size:.95rem;
+  line-height:2;
+  color:#e5e7ff;
+}
+
+/* blanks / check buttons */
+
+.blank-input{
+  border:none;
+  border-bottom:2px solid var(--accent);
+  background:rgba(255,75,138,.08);
+  border-radius:4px 4px 0 0;
+  padding:2px 6px;
+  min-width:140px;
+  color:var(--accent-soft);
+  font-weight:700;
+  font-size:.9rem;
+  text-align:center;
+  outline:none;
+  transition:all var(--transition-fast);
+}
+.blank-input:focus{
+  background:rgba(255,75,138,.16);
+}
+.blank-input.correct{
+  border-bottom-color:var(--accent-alt);
+  background:rgba(70,230,193,.12);
+  color:var(--accent-alt);
+}
+.blank-input.wrong{
+  border-bottom-color:#ff4b6b;
+  background:rgba(255,75,138,.16);
+  color:#ff8a9e;
+}
+
+.check-btn{
+  margin-top:10px;
+  padding:7px 18px;
+  border-radius:999px;
+  border:none;
+  background:linear-gradient(135deg,#ff8ab5,#ff4b8a);
+  color:#fff;
+  font-size:.8rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:transform var(--transition-fast),box-shadow var(--transition-fast),filter .18s;
+}
+.check-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 24px rgba(255,75,138,.55);
+  filter:brightness(1.04);
+}
+
+.feedback{
+  margin-top:8px;
+  padding:8px 10px;
+  border-radius:var(--radius-sm);
+  font-size:.83rem;
+  line-height:1.6;
+  display:none;
+}
+.feedback.show-c{
+  display:block;
+  background:rgba(70,230,193,.12);
+  border:1px solid rgba(70,230,193,.5);
+  color:#9ff0d6;
+}
+.feedback.show-w{
+  display:block;
+  background:rgba(255,75,138,.12);
+  border:1px solid rgba(255,75,138,.6);
+  color:#ffb7d0;
+}
+
+/* highlight for advanced version */
+.advanced-note{
+  margin-top:6px;
+  padding:8px 10px;
+  border-radius:8px;
+  background:rgba(255,211,78,0.08);
+  border:1px solid rgba(255,211,78,0.6);
+  color:#ffe89a;
+  font-size:0.88rem;
+}
+
+/* button-style rule highlight */
+.rule-chip{
+  display:inline-block;
+  margin-top:6px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#ffcf6b,#ffb43c);
+  color:#3a2600;
+  font-size:.8rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.rule-chip u{
+  text-decoration:underline;
+}
+
+/* responsive */
+
+@media(max-width:800px){
+  header{padding:26px 16px 18px;}
+  header h1{font-size:2rem;}
+  .tab-nav{top:78px;padding-inline:10px;}
+  .tab-btn{font-size:.7rem;padding-inline:10px;}
+  .tab-pane{padding:22px 12px 32px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧠 <span>WOULD</span> at Work</h1>
+  <p>Entenda o “would” com cenas reais, português claro e exercícios.</p>
+</header>
+
+<div class="tab-nav">
+  <button class="tab-btn active" data-target="pane-time">⏱ Requests (Would you...)</button>
+  <button class="tab-btn" data-target="pane-resource">👥 Offers (I would help...)</button>
+  <button class="tab-btn" data-target="pane-workload">📅 Past Habits (When I was... I would...)</button>
+  <button class="tab-btn" data-target="pane-inventory">📦 Needs (We would need...)</button>
+  <button class="tab-btn" data-target="pane-financial">💰 Advice (I would + verb)</button>
+  <button class="tab-btn" data-target="pane-communication">🤝 Opinions (I would say...)</button>
+  <button class="tab-btn" data-target="pane-professional">🎙️ Formal speech</button>
+  <button class="tab-btn" data-target="pane-org">🛡 Rules & expectations</button>
+  <button class="tab-btn" data-target="pane-data">💻 Hypothetical tech</button>
+  <button class="tab-btn" data-target="pane-risk">⚠️ What would happen if...?</button>
+  <button class="tab-btn" data-target="pane-meetings">📆 Meetings & agendas</button>
+  <button class="tab-btn" data-target="pane-exercises">✏️ Exercises</button>
+</div>
+
+<!-- ============ TIME (REQUESTS: WOULD YOU) ============ -->
+<div id="pane-time" class="tab-pane active">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      in an office in São Paulo. You need your American colleague Sarah to send you a file.
+      In your head, in Portuguese, you think:  
+      <em>"Me manda o arquivo" / "Send me the file, please" / "Can you send me the file, please?"</em>  
+      But you want to sound <strong>polite and professional</strong> in English.
+    </p>
+    <div class="quote">
+      "Sarah, <strong>would you</strong> send me the file before 3 pm?"
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      When you say <strong>“Would you + verb…?”</strong> you are making a
+      <strong>gentle, polite request</strong>.  
+      It’s like putting a soft pillow around the verb.
+    </p>
+    <p>
+      ● “Send me the file.” = order / comando (sounds direct).<br>
+      ● “Can you send me the file?” = ok, but more basic / neutral.<br>
+      ● “<strong>Would you</strong> send me the file?” = same idea, but softer and more professional.
+    </p>
+    <p>
+      <span class="rule-chip">
+        <u>KEY DIFFERENCE:</u> <strong>CAN</strong> = ability / “você consegue?” ·
+        <strong>WOULD</strong> = polite request / “você poderia?”
+      </span>
+    </p>
+    <p style="margin-top:8px;">
+      And <strong>DO you…?</strong> normally asks about a <u>habit or fact</u>:  
+      “Do you send the report every Monday?” = isso é rotina?  
+      Not a request.
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Asking for a file</div>
+  <div class="scenario-card">
+    <div class="tag">OFFICE EMAIL</div>
+    <h3>Você e Sarah (EUA), no e‑mail</h3>
+    <p>Você precisa do relatório que ela esqueceu de anexar.</p>
+    <div class="dialogue">
+      <div class="person">Você (email)</div>
+      <div class="speech">
+        "Hi Sarah, <strong>would you</strong> mind sending me the report again
+        with the attachment? I think the file didn’t come through. Thanks!"
+      </div>
+    </div>
+    <p>
+      Em português, na sua cabeça, é algo como:
+      <em>"Sarah, você pode me mandar o relatório de novo, por favor?"</em>
+    </p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "Hi Sarah, when you have a moment, <strong>would you</strong> mind resending the report
+      with the attachment? It seems the file didn’t come through on my side. I really appreciate it."
+    </div>
+  </div>
+
+  <div class="section-title">🎬 Scene 2 — In a meeting (door / air‑con)</div>
+  <div class="scenario-card">
+    <div class="tag">MEETING ROOM</div>
+    <h3>Sala de reunião fria demais</h3>
+    <p>O ar condicionado está congelando. Você quer pedir pra alguém diminuir um pouco.</p>
+    <div class="dialogue">
+      <div class="person">Você</div>
+      <div class="speech">
+        "Sorry, <strong>would you</strong> mind turning the air down a little?
+        It’s getting really cold in here."
+      </div>
+    </div>
+    <p>
+      Em português, você pensaria:
+      <em>"Você pode diminuir o ar um pouco? Tá muito frio."</em>
+    </p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "Sorry to interrupt, but <strong>would you</strong> mind turning the air down just a bit?
+      It’s getting really cold in here."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Em português, você ama dizer frases como:
+      <strong>"Me manda o arquivo"</strong>,
+      <strong>"Send me the file, please"</strong>,
+      <strong>"Can you send me the file, please?"</strong>.  
+      Tudo isso funciona, mas em inglês profissional, <strong>WOULD YOU</strong> é a forma mais suave e educada.
+    </p>
+    <p>
+      Pense assim:
+    </p>
+    <div class="pt-vocab">
+      <h5>CAN x DO x WOULD em perguntas</h5>
+      <ul>
+        <li><strong>CAN you send…?</strong> = Você consegue / pode mandar…? (foco em capacidade)</li>
+        <li><strong>DO you send…?</strong> = Você manda…? (rotina, hábito, fato)</li>
+        <li><strong>WOULD you send…?</strong> = Você poderia mandar…? (pedido educado)</li>
+      </ul>
+    </div>
+
+    <div class="pt-vocab" style="margin-top:10px;">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>WOULD YOU + verbo básico</strong></li>
+        <li>“Would you <strong>send</strong> the file?” = Você poderia <strong>mandar</strong> o arquivo?</li>
+        <li>“Would you <strong>close</strong> the door?” = Você poderia <strong>fechar</strong> a porta?</li>
+        <li>“Would you <strong>help</strong> me?” = Você poderia <strong>me ajudar</strong>?</li>
+      </ul>
+    </div>
+    <p>
+      Note: não coloca “to” depois de would.  
+      ❌ <em>Would you to send…</em> (errado)  
+      ✅ <strong>Would you send…</strong> (certo)
+    </p>
+
+    <div class="ptbr-box">
+      <h4>🇧🇷 Como falamos vs. inglês</h4>
+      <ul>
+        <li>"Você pode me mandar o arquivo?" → "Would you send me the file?"</li>
+        <li>"Você pode fechar a porta, por favor?" → "Would you close the door, please?"</li>
+        <li>"Você poderia repetir isso?" → "Would you repeat that?"</li>
+      </ul>
+    </div>
+
+    <p><strong>Resumo simples:</strong><br>
+      Se a sua frase em português começa com
+      <em>"Você pode…? / Você poderia…?"</em>,  
+      em contexto profissional, pense primeiro em <strong>WOULD YOU + verbo</strong>.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Requests with WOULD YOU)</div>
+  <div class="exercise-card" data-answer="would you">
+    <div class="ex-label">EX A (Requests)</div>
+    <div class="context">
+      You are on a Zoom call and you didn’t hear what your American boss said.  
+      In Portuguese, you would think: “Você poderia repetir?”
+    </div>
+    <div class="sentence">
+      "Sorry, ______ repeat that, please?"
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write the formula: <strong>WOULD YOU + verb</strong> = “Você poderia + verbo”.</li>
+      <li>Write 3 sentences in Portuguese that start with “Você pode…?” or “Você poderia…?” and translate them using <u>WOULD YOU</u>.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>WOULD YOU</strong>?
+  </p>
+</div>
+
+<!-- ============ RESOURCE (OFFERS: I WOULD HELP...) ============ -->
+<div id="pane-resource" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      working in a project team. Your colleague is overloaded and you want to offer help,
+      but you also want to be clear that this is conditional – you help <em>if</em> they need or <em>if</em> your boss agrees.
+    </p>
+    <div class="quote">
+      "I <strong>would</strong> help with the presentation <strong>if</strong> you need another pair of eyes."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      Here, <strong>I would + verb</strong> shows a <strong>conditional offer</strong>:
+      you are willing to do it, <u>if</u> a condition is true.
+    </p>
+    <p>
+      Compare:
+    </p>
+    <p>
+      ● “I help you.” = strange / sounds like a general truth.<br>
+      ● “I can help you.” = I’m able / I have time or skill.<br>
+      ● “I <strong>would</strong> help you <strong>if</strong> I had time.” = I want to, but there is a condition.
+    </p>
+    <p>
+      <span class="rule-chip">
+        <u>REMEMBER:</u> <strong>I WOULD</strong> = “eu ajudaria / eu faria” (em uma certa condição)
+      </span>
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Offering help to a colleague</div>
+  <div class="scenario-card">
+    <div class="tag">TEAM WORK</div>
+    <h3>Você vê seu colega sufocado com slides</h3>
+    <p>Ele precisa terminar 40 slides até amanhã. Você quer se oferecer, mas sem prometer demais.</p>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "I know you’re under pressure with this deck. I <strong>would</strong> help with the data slides
+        <strong>if</strong> you think that would be useful."
+      </div>
+    </div>
+    <p>
+      Na sua cabeça em português:
+      <em>"Eu te ajudaria com os gráficos se você achar útil."</em>
+    </p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "I can see you’re under a lot of pressure with this deck. I <strong>would</strong> be happy to support
+      with the data slides <strong>if</strong> that would be helpful."
+    </div>
+  </div>
+
+  <div class="section-title">🎬 Scene 2 — Conditional help with extra tasks</div>
+  <div class="scenario-card">
+    <div class="tag">BOUNDARIES</div>
+    <h3>Você quer oferecer ajuda, mas tem limite de horas</h3>
+    <p>Você quer ser gentil, mas também precisa proteger seu tempo.</p>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "I <strong>would</strong> be able to help with the client report
+        <strong>if</strong> we can move my internal meeting to tomorrow."
+      </div>
+    </div>
+    <p>
+      Em português, você pensa:
+      <em>"Eu conseguiria ajudar com o relatório se a gente conseguir mover minha reunião interna."</em>
+    </p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "I <strong>would</strong> be able to jump in on the client report
+      <strong>if</strong> we can shift my internal sync to tomorrow morning."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Em português, você pensa assim:
+      <strong>"Eu te ajudaria se..."</strong>, <strong>"Eu faria isso se..."</strong>.  
+      Em inglês, isso vira <strong>I WOULD + verbo + IF...</strong>.
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>I WOULD + verbo + IF + condição</strong></li>
+        <li>"I would help if I had more time." = Eu ajudaria se eu tivesse mais tempo.</li>
+        <li>"I would join if my manager agreed." = Eu participaria se meu gestor concordasse.</li>
+      </ul>
+    </div>
+    <p>
+      Importante: <strong>CAN</strong> fala de capacidade (“eu posso”),  
+      <strong>WOULD</strong> fala de vontade sob condição (“eu ajudaria se...”).
+    </p>
+
+    <div class="ptbr-box">
+      <h4>🇧🇷 Como falamos vs. inglês</h4>
+      <ul>
+        <li>"Eu te ajudaria se eu tivesse tempo." → "I would help you if I had time."</li>
+        <li>"Eu faria isso se o cliente aprovasse." → "I would do that if the client approved."</li>
+      </ul>
+    </div>
+
+    <p><strong>Resumo simples:</strong><br>
+      Se em português você pensa <em>"eu ajudaria se..."</em>,  
+      experimente usar <strong>I WOULD + verbo + IF</strong> em inglês.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Offers with I WOULD)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX B (Offers)</div>
+    <div class="context">
+      You want to help a colleague, but only if you finish your own work first.
+      In Portuguese you think: “Eu te ajudaria se eu terminasse isso aqui.”
+    </div>
+    <div class="sentence">
+      "I ______ help you if I finished this first."
+    </div>
+    <!-- no input yet – for now student writes in notebook; feedback explains -->
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write the pattern: <strong>I WOULD + verb + IF + condition</strong>.</li>
+      <li>Write 3 sentences starting with “I would…” in English, based on real situations in your job.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>I WOULD ... IF ...</strong>?
+  </p>
+</div>
+
+<!-- ============ WORKLOAD (PAST HABITS: I WOULD...) ============ -->
+<div id="pane-workload" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      telling a story about your previous job. You want to talk about things you
+      <strong>used to do regularly</strong> in the past.
+    </p>
+    <div class="quote">
+      "When I worked at the bank, I <strong>would</strong> stay late every Friday to finish the weekly reports."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      Here, <strong>would</strong> shows a <strong>repeated action in the past</strong> – a habit or routine.
+    </p>
+    <p>
+      ● “I stayed late.” = one specific moment. <br>
+      ● “I <strong>would</strong> stay late every Friday.” = isso era um hábito no passado.
+    </p>
+    <p>
+      <span class="rule-chip">
+        <u>REMEMBER:</u> "When I was..., I <strong>would</strong> + verb" = "Quando eu era..., eu <strong>costumava</strong>..."
+      </span>
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Talking about an old routine</div>
+  <div class="scenario-card">
+    <div class="tag">PAST JOB</div>
+    <h3>Você descrevendo seu antigo emprego em entrevista</h3>
+    <p>O recrutador pergunta como era seu dia a dia.</p>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "When I first joined the company, I <strong>would</strong> arrive at 7:30 every day
+        to prepare the room before the team came in."
+      </div>
+    </div>
+    <p>Na sua cabeça: <em>"Quando eu comecei lá, eu costumava chegar às 7:30 todo dia."</em></p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "In my previous role, I <strong>would</strong> consistently arrive by 7:30 every morning
+      so everything was ready before the rest of the team showed up."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Aqui o <strong>would</strong> não é futuro. Ele marca um <strong>hábito no passado</strong>, parecido com
+      “costumava”.
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>When I was ... , I WOULD + verbo</strong></li>
+        <li>"When I was an intern, I would arrive early." = Quando eu era estagiário, eu costumava chegar cedo.</li>
+      </ul>
+    </div>
+    <p>
+      Você também pode usar <strong>used to</strong>: “I used to arrive early.”  
+      Mas <strong>would</strong> é ótimo quando você já colocou o tempo no passado:
+      <em>"When I was there, I would..."</em>
+    </p>
+    <p><strong>Resumo simples:</strong><br>
+      Se você começa com “When I was...” e quer falar de hábito, pense em <strong>I WOULD + verbo</strong>.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Past habits with WOULD)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX C (Past Habits)</div>
+    <div class="context">
+      You want to say: “Quando eu trabalhava na agência, eu costumava revisar todos os e‑mails antes do fim do dia.”
+    </div>
+    <div class="sentence">
+      "When I worked at the agency, I ______ check all the emails before the end of the day."
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write 3 sentences starting with “When I was a student / intern / manager, I would…”</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>I WOULD</strong> for past habits?
+  </p>
+</div>
+
+<!-- ============ INVENTORY (NEEDS: WE WOULD NEED...) ============ -->
+<div id="pane-inventory" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      planning a big event. You need to talk about how many people, how much time or money
+      you <strong>would need</strong> in a hypothetical scenario.
+    </p>
+    <div class="quote">
+      "To deliver this project by June, <strong>we would need</strong> at least three more developers."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      <strong>We would need...</strong> = “nós precisaríamos...” em uma situação hipotética ou condicionada.
+    </p>
+    <p>
+      ● “We need three people.” = decisão direta, agora.<br>
+      ● “We <strong>would need</strong> three people <strong>if</strong> we did this plan.” = necessidade em hipótese.
+    </p>
+    <p>
+      <span class="rule-chip">
+        <u>REMEMBER:</u> <strong>WE WOULD NEED</strong> = "nós precisaríamos"
+      </span>
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Negotiating resources</div>
+  <div class="scenario-card">
+    <div class="tag">PROJECT ESTIMATE</div>
+    <h3>Você falando com um diretor sobre prazos</h3>
+    <p>O diretor quer saber se é possível entregar 2 meses antes.</p>
+    <div class="dialogue">
+      <div class="person">Director</div>
+      <div class="speech">
+        "If we wanted to launch in June instead of August, what would you need?"
+      </div>
+    </div>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "To hit a June launch, <strong>we would need</strong> at least three additional developers
+        and a dedicated QA for the next 8 weeks."
+      </div>
+    </div>
+    <p>
+      Na sua cabeça: <em>"Pra lançar em junho, a gente precisaria de pelo menos três devs a mais."</em>
+    </p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "To realistically hit a June launch date, <strong>we would need</strong> at least three additional engineers
+      and a dedicated QA for the next eight weeks."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Quando você diz em português:
+      <strong>"Pra isso, a gente precisaria de..."</strong>, em inglês isso é:
+      <strong>"we would need..."</strong>.
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>WE WOULD NEED + quantidade/coisa</strong></li>
+        <li>"We would need more time." = A gente precisaria de mais tempo.</li>
+        <li>"We would need extra budget." = A gente precisaria de orçamento extra.</li>
+      </ul>
+    </div>
+    <p><strong>Resumo simples:</strong><br>
+      Use <strong>WE WOULD NEED</strong> quando está falando de necessidade em hipótese, não de decisão já tomada.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (We would need...)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX D (Needs)</div>
+    <div class="context">
+      You want to say: “Para dobrar o número de clientes, a gente precisaria de mais duas pessoas em vendas.”
+    </div>
+    <div class="sentence">
+      "To double the number of clients, we ______ need two more people in sales."
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write three sentences starting with: “To achieve X, we would need…”</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>WE WOULD NEED</strong>?
+  </p>
+</div>
+
+<!-- ============ FINANCIAL (ADVICE: I WOULD + VERB) ============ -->
+<div id="pane-financial" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      giving advice to a friend about money, or giving a suggestion to a client.
+      You want to say what <strong>you would do</strong> in their situation.
+    </p>
+    <div class="quote">
+      "If I were you, I <strong>would</strong> keep a six‑month emergency fund before investing aggressively."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      Here, <strong>I would...</strong> is used for <strong>polite advice</strong> or
+      <strong>what I think is a good idea</strong>, often in a conditional:
+      “If I were you, I would…”.
+    </p>
+    <p>
+      Compare:
+    </p>
+    <p>
+      ● “You must do this.” = strong, sounds like order.<br>
+      ● “You should do this.” = advice (bom também).<br>
+      ● “If I were you, I <strong>would</strong> do this.” = advice, but soft and humble.
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Talking to a friend about savings</div>
+  <div class="scenario-card">
+    <div class="tag">PERSONAL ADVICE</div>
+    <h3>Seu amigo quer investir tudo em ações</h3>
+    <p>Ele não tem reserva e quer arriscar tudo.</p>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "Honestly, if I were you, I <strong>would</strong> build an emergency fund first
+        and then start investing in stocks."
+      </div>
+    </div>
+    <p>Na sua cabeça: <em>"Se eu fosse você, eu faria uma reserva antes e depois investiria."</em></p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "If I were in your position, I <strong>would</strong> focus on building an emergency fund first,
+      and only then start taking on more risk with stocks."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Em português é:
+      <strong>"Se eu fosse você, eu faria..."</strong>.  
+      Em inglês, isso é:
+      <strong>"If I were you, I WOULD + verbo"</strong>.
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>If I were you, I WOULD + verbo</strong></li>
+        <li>"If I were you, I would wait." = Se eu fosse você, eu esperaria.</li>
+      </ul>
+    </div>
+    <p><strong>Resumo simples:</strong><br>
+      Use <strong>I WOULD</strong> para conselhos suaves, especialmente com “If I were you…”.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Advice with I WOULD)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX E (Advice)</div>
+    <div class="context">
+      You want to say: “Se eu fosse você, eu guardaria um pouco todo mês.”
+    </div>
+    <div class="sentence">
+      "If I were you, I ______ save a little every month."
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write 3 sentences starting with “If I were you, I would…” for different topics (money, career, health).</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>IF I WERE YOU, I WOULD...</strong>?
+  </p>
+</div>
+
+<!-- ============ COMMUNICATION (OPINIONS: I WOULD SAY...) ============ -->
+<div id="pane-communication" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      in a meeting, and you want to give your opinion without sounding too direct or aggressive.
+    </p>
+    <div class="quote">
+      "I <strong>would say</strong> the main risk here is timing, not budget."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      <strong>I would say...</strong> is a soft way to give your opinion.  
+      It’s like “I think…”, but more polite and less absolute.
+    </p>
+    <p>
+      ● “The main risk is timing.” = strong statement.<br>
+      ● “I think the main risk is timing.” = softer.<br>
+      ● “I <strong>would say</strong> the main risk is timing.” = ainda mais suave / profissional.
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Giving an opinion in a meeting</div>
+  <div class="scenario-card">
+    <div class="tag">MEETING</div>
+    <h3>Você quer discordar com suavidade</h3>
+    <p>Outra pessoa diz que o problema é o orçamento, mas você acha que é o prazo.</p>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "I <strong>would say</strong> the budget is tight, but the bigger issue is actually timing."
+      </div>
+    </div>
+    <p>Na sua cabeça: <em>"Eu diria que o orçamento é apertado, mas o problema maior é o prazo."</em></p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "I <strong>would say</strong> budget is tight, but the more critical constraint is actually timing."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Em português você fala:
+      <strong>"Eu diria que..."</strong>, <strong>"Eu acho que..."</strong>.  
+      Em inglês, <strong>I would say</strong> é uma forma elegante de fazer isso.
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>I WOULD SAY + opinião</strong></li>
+        <li>"I would say this option is safer." = Eu diria que essa opção é mais segura.</li>
+      </ul>
+    </div>
+    <p><strong>Resumo simples:</strong><br>
+      Use <strong>I WOULD SAY</strong> quando quiser dar opinião de forma diplomática, especialmente em reuniões.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Opinions with I WOULD SAY)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX F (Opinions)</div>
+    <div class="context">
+      You want to say: “Eu diria que essa solução é mais simples.”
+    </div>
+    <div class="sentence">
+      "I ______ say this solution is simpler."
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write 3 opinions about your work starting with “I would say…”.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>I WOULD SAY...</strong>?
+  </p>
+</div>
+
+<!-- ============ PROFESSIONAL (FORMAL SPEECH) ============ -->
+<div id="pane-professional" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      presenting to senior leadership or a client. You want to sound formal and careful,
+      not extreme or absolute.
+    </p>
+    <div class="quote">
+      "Based on the data, we <strong>would expect</strong> to see results in the second quarter."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      In formal speech, <strong>would</strong> makes your statement <strong>more cautious and professional</strong>.
+    </p>
+    <p>
+      ● “We expect results in Q2.” = direct / strong.<br>
+      ● “We <strong>would expect</strong> results in Q2.” = baseado nos dados, é provável, mas não 100% garantido.
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Presenting to the board</div>
+  <div class="scenario-card">
+    <div class="tag">BOARD PRESENTATION</div>
+    <h3>Você apresentando um plano com incerteza</h3>
+    <p>Há variáveis que você não controla, mas você quer mostrar tendência.</p>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "If we implement this strategy now, we <strong>would expect</strong> to see a 10–15% increase in revenue by Q3."
+      </div>
+    </div>
+    <p>Na cabeça: <em>"Se implementarmos agora, a gente esperaria ver um aumento de 10–15%."</em></p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "Assuming execution goes as planned, we <strong>would expect</strong> to see a 10 to 15 percent uplift in revenue by Q3."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Em comunicação formal, o <strong>would</strong> deixa a frase menos absoluta.
+      É como dizer "a tendência é que...", "a expectativa seria...".
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>WE WOULD EXPECT + resultado</strong></li>
+        <li>"We would expect some resistance at first." = Esperaríamos alguma resistência no começo.</li>
+      </ul>
+    </div>
+    <p><strong>Resumo simples:</strong><br>
+      Use <strong>would</strong> em apresentações formais para parecer profissional e cuidadoso com certezas.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Formal speech with WOULD)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX G (Formal)</div>
+    <div class="context">
+      You want to say: “Esperaríamos ver alguns erros nas primeiras semanas.”
+    </div>
+    <div class="sentence">
+      "We ______ expect to see some errors in the first few weeks."
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write 3 sentences for presentations starting with “We would expect…”.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>WE WOULD EXPECT...</strong>?
+  </p>
+</div>
+
+<!-- ============ ORG (RULES & EXPECTATIONS: WOULD) ============ -->
+<div id="pane-org" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      explaining company expectations to a new hire. You want to describe what the company
+      <strong>would expect</strong> from them in different situations.
+    </p>
+    <div class="quote">
+      "In cases like this, we <strong>would expect</strong> you to inform your manager first."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      Here, <strong>would</strong> is used to express <strong>typical expectations</strong>: what normally should happen.
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Explaining policy</div>
+  <div class="scenario-card">
+    <div class="tag">ONBOARDING</div>
+    <h3>Você explicando regras para um novo colaborador</h3>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "If you need to work from home unexpectedly, we <strong>would expect</strong> you to let your manager know as early as possible."
+      </div>
+    </div>
+    <p>Na cabeça: <em>"A gente esperaria que você avisasse seu gestor o quanto antes."</em></p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "In situations like that, we <strong>would expect</strong> you to inform your manager as early as possible."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Aqui, <strong>we would expect</strong> é “nós esperaríamos que...”, mas na prática funciona como
+      “nós esperamos que, em situações assim, você...”.
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>WE WOULD EXPECT YOU TO + verbo</strong></li>
+        <li>"We would expect you to be on time." = Esperamos que você seja pontual.</li>
+      </ul>
+    </div>
+    <p><strong>Resumo simples:</strong><br>
+      Use <strong>we would expect</strong> para falar de expectativas de forma educada e não tão rígida.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Expectations)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX H (Rules)</div>
+    <div class="context">
+      You want to say: “Esperaríamos que você comunicasse atrasos imediatamente.”
+    </div>
+    <div class="sentence">
+      "We ______ expect you to communicate delays immediately."
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write 3 sentences with “We would expect you to…” using real expectations in your company.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>WE WOULD EXPECT YOU TO...</strong>?
+  </p>
+</div>
+
+<!-- ============ DATA/TECH (HYPOTHETICAL TECH: WOULD) ============ -->
+<div id="pane-data" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      a tech lead explaining what <strong>would</strong> happen in a system under certain conditions.
+    </p>
+    <div class="quote">
+      "If we removed the cache, the system <strong>would</strong> slow down significantly."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      In technical explanations, <strong>would</strong> shows what is <strong>expected to happen in a hypothetical scenario</strong>.
+    </p>
+    <p>
+      ● “The system slows down.” = describing now / always.<br>
+      ● “The system <strong>would</strong> slow down if we removed the cache.” = descrição de cenário hipotético.
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Explaining system behavior</div>
+  <div class="scenario-card">
+    <div class="tag">SYSTEM IMPACT</div>
+    <h3>Você explicando uma decisão técnica</h3>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "If we processed every request synchronously, the API <strong>would</strong> become too slow during peak hours."
+      </div>
+    </div>
+    <p>Na cabeça: <em>"Se a gente processasse tudo síncrono, a API ficaria lenta demais no pico."</em></p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "If we switched everything to synchronous processing, the API <strong>would</strong> likely become unusable during peak traffic."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Em engenharia, <strong>would</strong> serve para dizer o que aconteceria em determinado cenário:
+      “se a gente fizer X, Y aconteceria”.
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>If + condição, RESULTADO WITH WOULD</strong></li>
+        <li>"If we removed this, it would break." = Se tirássemos isso, quebraria.</li>
+      </ul>
+    </div>
+    <p><strong>Resumo simples:</strong><br>
+      Use <strong>would</strong> para explicar comportamentos “se acontecer X, aconteceria Y”.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Tech hypotheticals)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX I (Tech)</div>
+    <div class="context">
+      You want to say: “Se a gente desligasse o cache, o sistema ficaria muito mais lento.”
+    </div>
+    <div class="sentence">
+      "If we turned off the cache, the system ______ become much slower."
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write 3 “If X, Y would…” sentences for systems you work with.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>would</strong> in technical scenarios?
+  </p>
+</div>
+
+<!-- ============ RISK (WHAT WOULD HAPPEN IF...?) ============ -->
+<div id="pane-risk" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      discussing risks. You need to ask and answer questions about what <strong>would</strong> happen
+      if something went wrong.
+    </p>
+    <div class="quote">
+      "What <strong>would</strong> happen if our main supplier failed?"
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      <strong>What would happen if...?</strong> is the classic structure for risk scenarios.
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Risk workshop</div>
+  <div class="scenario-card">
+    <div class="tag">RISK ANALYSIS</div>
+    <h3>Você conduzindo um workshop de risco</h3>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "What <strong>would</strong> happen if our largest customer stopped ordering for three months?"
+      </div>
+    </div>
+    <p>Na cabeça: <em>"O que aconteceria se nosso maior cliente parasse de pedir por três meses?"</em></p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "What <strong>would</strong> be the impact if our largest customer paused orders for a full quarter?"
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Em português: <strong>"O que aconteceria se...?"</strong>  
+      Em inglês: <strong>"What would happen if...?"</strong>
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>WHAT WOULD HAPPEN IF + cenário?</strong></li>
+      </ul>
+    </div>
+    <p><strong>Resumo simples:</strong><br>
+      Use <strong>What would happen if...?</strong> para abrir discussões de risco e cenário.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Risk questions)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX J (Risk)</div>
+    <div class="context">
+      You want to ask: “O que aconteceria se o sistema ficasse fora do ar por 24 horas?”
+    </div>
+    <div class="sentence">
+      "What ______ happen if the system was down for 24 hours?"
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write 3 risk questions starting with “What would happen if…?”</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>What would happen if...?</strong>?
+  </p>
+</div>
+
+<!-- ============ MEETINGS (AGENDAS & SUGGESTIONS: I WOULD START...) ============ -->
+<div id="pane-meetings" class="tab-pane">
+  <div class="imagine-block">
+    <h2>Imagine that you are...</h2>
+    <p>
+      planning a meeting or giving a suggestion for how to structure a discussion.
+    </p>
+    <div class="quote">
+      "I <strong>would start</strong> with the risks, then move to the timeline."
+    </div>
+  </div>
+
+  <div class="section-title">📌 What this “WOULD” means here</div>
+  <div class="meaning-box">
+    <p>
+      <strong>I would start...</strong> expresses your <strong>suggestion</strong> for the best way to do something
+      – similar to “I think we should start…”, but more personal.
+    </p>
+  </div>
+
+  <div class="section-title">🎬 Scene 1 — Suggesting an agenda</div>
+  <div class="scenario-card">
+    <div class="tag">AGENDA</div>
+    <h3>Você sugerindo como tocar a reunião</h3>
+    <div class="dialogue">
+      <div class="person">You</div>
+      <div class="speech">
+        "I <strong>would start</strong> with a quick overview of the goals, then go into the open issues."
+      </div>
+    </div>
+    <p>Na cabeça: <em>"Eu começaria com uma visão geral das metas..."</em></p>
+
+    <div class="advanced-note">
+      <strong>Advanced English version:</strong><br>
+      "I <strong>would start</strong> with a brief overview of the objectives and then move into the key open issues."
+    </div>
+  </div>
+
+  <button class="pt-toggle-btn" onclick="togglePT(this)">
+    <span>🇧🇷</span>
+    <span>Explicação em Português — clique para revelar</span>
+    <span class="arrow">▼</span>
+  </button>
+  <div class="pt-content">
+    <h4>Explicação em Português Brasileiro</h4>
+    <p>
+      Em português: <strong>"Eu começaria..."</strong>, <strong>"Eu faria assim..."</strong>.  
+      Em inglês: <strong>"I would start..."</strong>, <strong>"I would do it this way..."</strong>.
+    </p>
+    <div class="pt-vocab">
+      <h5>Construção para lembrar</h5>
+      <ul>
+        <li><strong>I WOULD START WITH + coisa 1, THEN...</strong></li>
+      </ul>
+    </div>
+    <p><strong>Resumo simples:</strong><br>
+      Use <strong>I would start...</strong> para sugerir a ordem das coisas em reuniões.
+    </p>
+  </div>
+
+  <div class="section-title">✏️ Mini‑exercise (Meeting suggestions)</div>
+  <div class="exercise-card" data-answer="would">
+    <div class="ex-label">EX K (Meetings)</div>
+    <div class="context">
+      You want to say: “Eu começaria pela visão geral do projeto.”
+    </div>
+    <div class="sentence">
+      "I ______ start with an overview of the project."
+    </div>
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="tips-box">
+    <h4>💡 What to write in your notebook</h4>
+    <ul>
+      <li>Write 3 sentences about how you would structure important meetings, starting with “I would start…”.</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:8px;color:#a0a8c0;">
+    What did you write in your notebook about <strong>I WOULD START...</strong>?
+  </p>
+</div>
+
+<!-- ============ EXERCISES (GLOBAL) ============ -->
+<div id="pane-exercises" class="tab-pane">
+  <div class="score-box">
+    <h3>SCORE</h3>
+    <div class="score-number" id="scoreValue">0 / 1</div>
+    <div class="score-sub">Por enquanto só 1 exercício global (do “Would you”). Depois ampliaremos.</div>
+    <button class="reset-btn" onclick="resetExercises()">Reset</button>
+  </div>
+
+  <div class="exercise-card" data-answer="would you">
+    <div class="ex-label">EX 1</div>
+    <div class="context">
+      Você está numa call e quer pedir para a pessoa falar mais devagar.  
+      Em PT: “Você poderia falar mais devagar?”
+    </div>
+    <div class="sentence">
+      "Sorry, ______ speak a little more slowly?"
+    </div>
+    <input class="blank-input" type="text" placeholder="type answer..." />
+    <button class="check-btn" onclick="checkExercise(this)">Check</button>
+    <div class="feedback"></div>
+  </div>
+</div>
+
+<script>
+// TAB LOGIC
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const panes = document.querySelectorAll('.tab-pane');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      panes.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const id = btn.getAttribute('data-target');
+      const pane = document.getElementById(id);
+      if (pane) pane.classList.add('active');
+    });
+  });
+});
+
+// PORTUGUESE TOGGLE
+function togglePT(button){
+  const content = button.nextElementSibling;
+  if (!content) return;
+  const isOpen = content.classList.contains('visible');
+  if (isOpen){
+    content.classList.remove('visible');
+    button.classList.remove('open');
+  }else{
+    content.classList.add('visible');
+    button.classList.add('open');
+  }
+}
+
+// EXERCISES
+function normalize(str){
+  return str.toLowerCase().replace(/\s+/g,' ').trim();
+}
+function checkExercise(btn){
+  const card = btn.closest('.exercise-card');
+  const correct = normalize(card.dataset.answer);
+  const input = card.querySelector('.blank-input') || null;
+
+  if (!input){
+    const fb = card.querySelector('.feedback');
+    fb.textContent = 'Here the idea is to answer in your notebook. Think about the would-construction we studied.';
+    fb.classList.add('show-c');
+    return;
+  }
+
+  const fb = card.querySelector('.feedback');
+  const user = normalize(input.value);
+  input.classList.remove('correct','wrong');
+  fb.classList.remove('show-c','show-w');
+  if (!user){
+    fb.textContent = 'Type your answer first 🙂';
+    fb.classList.add('show-w');
+    return;
+  }
+  if (user === correct){
+    input.classList.add('correct');
+    fb.textContent = 'Perfect! That is the correct construction.';
+    fb.classList.add('show-c');
+  }else{
+    input.classList.add('wrong');
+    fb.textContent = 'Not yet. Remember the formula you wrote in your notebook.';
+    fb.classList.add('show-w');
+  }
+  updateScore();
+}
+function updateScore(){
+  const cards = document.querySelectorAll('.exercise-card');
+  let correctCount = 0;
+  cards.forEach(card=>{
+    const inp = card.querySelector('.blank-input');
+    const answer = normalize(card.dataset.answer);
+    if (!inp) return;
+    if (normalize(inp.value) === answer) correctCount++;
+  });
+  document.getElementById('scoreValue').textContent = `${correctCount} / ${cards.length}`;
+}
+function resetExercises(){
+  const cards = document.querySelectorAll('.exercise-card');
+  cards.forEach(card=>{
+    const inp = card.querySelector('.blank-input');
+    const fb = card.querySelector('.feedback');
+    if (inp){
+      inp.value = '';
+      inp.classList.remove('correct','wrong');
+    }
+    if (fb){
+      fb.textContent = '';
+      fb.classList.remove('show-c','show-w');
+    }
+  });
+  document.getElementById('scoreValue').textContent = '0 / 1';
+}
+</script>
+
+</body>
+</html>
